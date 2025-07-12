@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Aegis Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .animated-underline {
+            position: relative;
+        }
+        .animated-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-300 min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="bg-dark border-b border-gray-800 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#services" class="text-gray-300 hover:text-white animated-underline">Services</a>
+                <a href="index.html#process" class="text-gray-300 hover:text-white animated-underline">Our Process</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white animated-underline">About</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white animated-underline">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-dark py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="w-20 h-20 bg-blue-900 bg-opacity-30 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-shield-alt text-primary text-3xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <span class="gradient-text">Privacy Policy</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    How we collect, use, and protect your information
+                </p>
+                <p class="text-gray-500 mt-4">Last updated: December 15, 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-12">
+                    <!-- Introduction -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Introduction</h2>
+                        <p class="text-gray-300 mb-4">
+                            Aegis Security Solutions ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.
+                        </p>
+                        <p class="text-gray-300">
+                            By using our services, you consent to the data practices described in this policy. If you do not agree with our policies and practices, please do not use our services.
+                        </p>
+                    </div>
+
+                    <!-- Information We Collect -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Information We Collect</h2>
+                        
+                        <h3 class="text-xl font-bold text-white mb-4">Personal Information</h3>
+                        <p class="text-gray-300 mb-4">
+                            We may collect personal information that you voluntarily provide to us, including:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6">
+                            <li>Name, email address, and phone number</li>
+                            <li>Company name and job title</li>
+                            <li>Information about your organization's security needs</li>
+                            <li>Communication preferences</li>
+                            <li>Payment information (processed securely through third-party providers)</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-white mb-4">Technical Information</h3>
+                        <p class="text-gray-300 mb-4">
+                            We automatically collect certain information when you visit our website:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6">
+                            <li>IP address and device information</li>
+                            <li>Browser type and version</li>
+                            <li>Pages visited and time spent on our website</li>
+                            <li>Referring website information</li>
+                            <li>Cookies and similar tracking technologies</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-white mb-4">Service-Related Information</h3>
+                        <p class="text-gray-300">
+                            When you use our dark web monitoring services, we may collect:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Organization names and domains for scanning</li>
+                            <li>Threat intelligence data and findings</li>
+                            <li>Service usage patterns and preferences</li>
+                            <li>Communication records and support interactions</li>
+                        </ul>
+                    </div>
+
+                    <!-- How We Use Information -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">How We Use Your Information</h2>
+                        <p class="text-gray-300 mb-4">
+                            We use the information we collect for the following purposes:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Provide and maintain our dark web monitoring services</li>
+                            <li>Process payments and manage your account</li>
+                            <li>Communicate with you about our services</li>
+                            <li>Send security alerts and threat intelligence reports</li>
+                            <li>Improve our services and develop new features</li>
+                            <li>Comply with legal obligations and industry regulations</li>
+                            <li>Protect against fraud and ensure service security</li>
+                        </ul>
+                    </div>
+
+                    <!-- Information Sharing -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Information Sharing and Disclosure</h2>
+                        <p class="text-gray-300 mb-4">
+                            We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and providing services</li>
+                            <li><strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights and safety</li>
+                            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred</li>
+                            <li><strong>Consent:</strong> We may share information with your explicit consent</li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Security -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Data Security</h2>
+                        <p class="text-gray-300 mb-4">
+                            We implement appropriate technical and organizational security measures to protect your information:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Encryption of data in transit and at rest</li>
+                            <li>Secure data centers with physical and digital security</li>
+                            <li>Regular security assessments and penetration testing</li>
+                            <li>Access controls and authentication measures</li>
+                            <li>Employee training on data protection practices</li>
+                            <li>Incident response procedures and breach notification protocols</li>
+                        </ul>
+                    </div>
+
+                    <!-- Your Rights -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Your Rights and Choices</h2>
+                        <p class="text-gray-300 mb-4">
+                            Depending on your location, you may have the following rights regarding your personal information:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li><strong>Access:</strong> Request access to your personal information</li>
+                            <li><strong>Correction:</strong> Request correction of inaccurate information</li>
+                            <li><strong>Deletion:</strong> Request deletion of your personal information</li>
+                            <li><strong>Portability:</strong> Request transfer of your data to another service</li>
+                            <li><strong>Objection:</strong> Object to certain processing of your information</li>
+                            <li><strong>Withdrawal:</strong> Withdraw consent for data processing</li>
+                        </ul>
+                        <p class="text-gray-300 mt-4">
+                            To exercise these rights, please contact us using the information provided below.
+                        </p>
+                    </div>
+
+                    <!-- Cookies -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Cookies and Tracking Technologies</h2>
+                        <p class="text-gray-300 mb-4">
+                            We use cookies and similar technologies to enhance your experience on our website:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li><strong>Essential Cookies:</strong> Required for website functionality</li>
+                            <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our website</li>
+                            <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+                            <li><strong>Marketing Cookies:</strong> Used for targeted advertising (with consent)</li>
+                        </ul>
+                        <p class="text-gray-300 mt-4">
+                            You can control cookie settings through your browser preferences. However, disabling certain cookies may affect website functionality.
+                        </p>
+                    </div>
+
+                    <!-- International Transfers -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">International Data Transfers</h2>
+                        <p class="text-gray-300 mb-4">
+                            Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your data during international transfers, including:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Standard contractual clauses approved by relevant authorities</li>
+                            <li>Adequacy decisions for certain countries</li>
+                            <li>Certification schemes and codes of conduct</li>
+                            <li>Other appropriate safeguards as required by law</li>
+                        </ul>
+                    </div>
+
+                    <!-- Children's Privacy -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Children's Privacy</h2>
+                        <p class="text-gray-300">
+                            Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.
+                        </p>
+                    </div>
+
+                    <!-- Changes to Policy -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Changes to This Privacy Policy</h2>
+                        <p class="text-gray-300 mb-4">
+                            We may update this Privacy Policy from time to time. We will notify you of any material changes by:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Posting the updated policy on our website</li>
+                            <li>Sending email notifications to registered users</li>
+                            <li>Displaying prominent notices on our website</li>
+                        </ul>
+                        <p class="text-gray-300 mt-4">
+                            Your continued use of our services after any changes indicates your acceptance of the updated policy.
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">Contact Us</h2>
+                        <p class="text-gray-300 mb-4">
+                            If you have any questions about this Privacy Policy or our data practices, please contact us:
+                        </p>
+                        <div class="space-y-2 text-gray-300">
+                            <p><strong>Email:</strong> privacy@aegissecurity.com</p>
+                            <p><strong>Phone:</strong> +1 (800) 555-1234</p>
+                            <p><strong>Address:</strong> Secure Facility, New York, NY</p>
+                            <p><strong>Data Protection Officer:</strong> dpo@aegissecurity.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </div>
+                <div class="text-gray-400 text-sm text-center md:text-right">
+                    <p>© 2023 Aegis Security Solutions. All rights reserved.</p>
+                    <p class="mt-1">Dark Web Intelligence & Monitoring</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

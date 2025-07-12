@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Web Exposure Scan | Aegis Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        .animated-underline {
+            position: relative;
+        }
+        .animated-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-300 min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="bg-dark border-b border-gray-800 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#services" class="text-gray-300 hover:text-white animated-underline">Services</a>
+                <a href="index.html#process" class="text-gray-300 hover:text-white animated-underline">Our Process</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white animated-underline">About</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white animated-underline">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-dark py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="w-20 h-20 bg-blue-900 bg-opacity-30 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-search text-primary text-3xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Dark Web <span class="gradient-text">Exposure Scan</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Comprehensive one-time scan of dark web markets, hacker forums, and paste sites to identify your organization's exposed data.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Scan -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">What We <span class="gradient-text">Scan</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Our proprietary tools search across thousands of dark web sources to find your exposed data
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-red-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-store text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Dark Web Marketplaces</h3>
+                    <p class="text-gray-400">
+                        Search through underground marketplaces where stolen credentials, databases, and corporate data are bought and sold.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-yellow-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-yellow-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Hacker Forums</h3>
+                    <p class="text-gray-400">
+                        Monitor private and public hacker forums where cybercriminals discuss and share compromised data.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-green-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-file-alt text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Paste Sites</h3>
+                    <p class="text-gray-400">
+                        Check popular paste sites where hackers publicly dump large datasets of stolen information.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-purple-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Telegram Channels</h3>
+                    <p class="text-gray-400">
+                        Monitor encrypted messaging channels where cybercriminals share and trade stolen data.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-blue-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-database text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Data Dumps</h3>
+                    <p class="text-gray-400">
+                        Search through massive data dumps containing millions of compromised credentials and records.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-orange-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-orange-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">GitHub Repositories</h3>
+                    <p class="text-gray-400">
+                        Scan public repositories for accidentally exposed API keys, credentials, and sensitive data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Find -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">What We <span class="gradient-text">Find</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Common types of exposed data we discover during our scans
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">Credentials & Access</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-user text-red-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="text-white font-medium">Employee Credentials</h4>
+                                <p class="text-gray-400 text-sm">Email/password combinations from data breaches</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-key text-red-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="text-white font-medium">API Keys</h4>
+                                <p class="text-gray-400 text-sm">Exposed API keys and access tokens</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-server text-red-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="text-white font-medium">Database Access</h4>
+                                <p class="text-gray-400 text-sm">Database connection strings and credentials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">Sensitive Data</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-id-card text-yellow-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="text-white font-medium">Personal Information</h4>
+                                <p class="text-gray-400 text-sm">Names, addresses, phone numbers, SSNs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-credit-card text-yellow-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="text-white font-medium">Financial Data</h4>
+                                <p class="text-gray-400 text-sm">Credit card numbers, bank account details</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-file-medical text-yellow-400 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="text-white font-medium">Healthcare Records</h4>
+                                <p class="text-gray-400 text-sm">Medical records and patient information</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Scan <span class="gradient-text">Process</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    How our comprehensive dark web exposure scan works
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-primary font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Setup & Configuration</h3>
+                    <p class="text-gray-400">
+                        We configure our scanning parameters to target your organization's specific domains, email addresses, and key personnel.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-secondary font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Comprehensive Scan</h3>
+                    <p class="text-gray-400">
+                        Our proprietary tools scan thousands of dark web sources over 48-72 hours to ensure thorough coverage.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-accent bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-accent font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Analysis & Report</h3>
+                    <p class="text-gray-400">
+                        Our threat analysts verify findings and deliver a detailed report with risk assessment and remediation recommendations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Pricing & <span class="gradient-text">Packages</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Choose the scan package that best fits your organization's needs
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Package -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">Basic Scan</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$2,500</div>
+                        <p class="text-gray-400">One-time scan</p>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Core dark web sources</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Email credential search</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Basic threat report</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">7-day delivery</span>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center block">
+                        Request Basic Scan
+                    </a>
+                </div>
+                
+                <!-- Professional Package -->
+                <div class="bg-gray-900 border-2 border-primary rounded-xl p-8 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">Most Popular</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">Professional Scan</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$5,000</div>
+                        <p class="text-gray-400">Comprehensive scan</p>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">All Basic features</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Extended source coverage</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Executive summary</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Remediation guidance</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">3-day delivery</span>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center block">
+                        Request Professional Scan
+                    </a>
+                </div>
+                
+                <!-- Enterprise Package -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">Enterprise Scan</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$10,000</div>
+                        <p class="text-gray-400">Full assessment</p>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">All Professional features</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Custom threat intelligence</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Executive presentation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Follow-up consultation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">24-hour delivery</span>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center block">
+                        Request Enterprise Scan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Discover Your Dark Web Exposure?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Don't wait until it's too late. Our comprehensive scan will reveal if your organization's data is already compromised.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="index.html#contact" class="bg-white hover:bg-gray-100 text-dark font-bold py-4 px-8 rounded-lg transition duration-300">
+                    Request Your Scan
+                </a>
+                <a href="sample-report.html" class="border border-white text-white hover:bg-white hover:bg-opacity-10 font-bold py-4 px-8 rounded-lg transition duration-300">
+                    View Sample Report
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </div>
+                <div class="text-gray-400 text-sm text-center md:text-right">
+                    <p>© 2023 Aegis Security Solutions. All rights reserved.</p>
+                    <p class="mt-1">Dark Web Intelligence & Monitoring</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

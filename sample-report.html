@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Dark Web Report | Aegis Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        .animated-underline {
+            position: relative;
+        }
+        .animated-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover:after {
+            width: 100%;
+        }
+        .report-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-300 min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="bg-dark border-b border-gray-800 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#services" class="text-gray-300 hover:text-white animated-underline">Services</a>
+                <a href="index.html#process" class="text-gray-300 hover:text-white animated-underline">Our Process</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white animated-underline">About</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white animated-underline">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-dark py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="w-20 h-20 bg-blue-900 bg-opacity-30 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-file-alt text-primary text-3xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Sample <span class="gradient-text">Dark Web Report</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    See what you'll receive from our comprehensive dark web exposure scan. This is a sample report showing typical findings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Report -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Report Header -->
+                <div class="report-card rounded-xl p-8 mb-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white mb-2">Dark Web Exposure Report</h2>
+                            <p class="text-gray-400">Sample Company Inc.</p>
+                            <p class="text-gray-400">Report Date: December 15, 2023</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="w-16 h-16 bg-red-900 bg-opacity-30 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-exclamation-triangle text-red-400 text-2xl"></i>
+                            </div>
+                            <p class="text-red-400 font-bold mt-2">HIGH RISK</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-red-400 mb-2">12</div>
+                            <div class="text-gray-400">Exposed Credentials</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-400 mb-2">3</div>
+                            <div class="text-gray-400">Data Breaches</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-400 mb-2">8</div>
+                            <div class="text-gray-400">Dark Web Mentions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Summary -->
+                <div class="report-card rounded-xl p-8 mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6">Executive Summary</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-300">
+                            Our comprehensive dark web scan of Sample Company Inc. revealed significant exposure of sensitive data across multiple underground sources. 
+                            We identified 12 compromised employee credentials, 3 confirmed data breaches, and 8 mentions of the company in dark web forums.
+                        </p>
+                        <p class="text-gray-300">
+                            <strong class="text-red-400">Critical Finding:</strong> Employee email credentials from the 2022 LinkedIn breach are actively being sold on dark web marketplaces for $50-200 per credential.
+                        </p>
+                        <p class="text-gray-300">
+                            <strong class="text-yellow-400">Medium Risk:</strong> Company database dump from 2021 containing customer PII is circulating on hacker forums.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Detailed Findings -->
+                <div class="report-card rounded-xl p-8 mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6">Detailed Findings</h3>
+                    
+                    <!-- Finding 1 -->
+                    <div class="border-l-4 border-red-400 pl-6 mb-8">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-exclamation-triangle text-red-400 mr-3"></i>
+                            <h4 class="text-lg font-bold text-white">Compromised Employee Credentials</h4>
+                        </div>
+                        <p class="text-gray-300 mb-3">
+                            We discovered 12 employee email/password combinations from the 2022 LinkedIn data breach being sold on dark web marketplaces.
+                        </p>
+                        <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                            <div class="font-mono text-sm">
+                                <p class="text-green-400">Source: Dark Web Marketplace "ShadowMarket"</p>
+                                <p class="text-white">Price: $150 per credential</p>
+                                <p class="text-white">Quantity: 12 credentials available</p>
+                                <p class="text-yellow-400">Last Updated: December 10, 2023</p>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-400">
+                            <strong>Impact:</strong> These credentials could be used for credential stuffing attacks, email compromise, or lateral movement within your network.
+                        </div>
+                    </div>
+
+                    <!-- Finding 2 -->
+                    <div class="border-l-4 border-yellow-400 pl-6 mb-8">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-database text-yellow-400 mr-3"></i>
+                            <h4 class="text-lg font-bold text-white">Customer Database Exposure</h4>
+                        </div>
+                        <p class="text-gray-300 mb-3">
+                            A 2021 database dump containing customer information is being shared on multiple hacker forums.
+                        </p>
+                        <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                            <div class="font-mono text-sm">
+                                <p class="text-green-400">Source: Hacker Forum "UndergroundHub"</p>
+                                <p class="text-white">Records: ~15,000 customer records</p>
+                                <p class="text-white">Data Types: Names, emails, phone numbers, addresses</p>
+                                <p class="text-yellow-400">Breach Date: March 2021</p>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-400">
+                            <strong>Impact:</strong> Customer PII exposure could lead to identity theft, phishing attacks, and regulatory compliance issues.
+                        </div>
+                    </div>
+
+                    <!-- Finding 3 -->
+                    <div class="border-l-4 border-blue-400 pl-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-comments text-blue-400 mr-3"></i>
+                            <h4 class="text-lg font-bold text-white">Dark Web Mentions</h4>
+                        </div>
+                        <p class="text-gray-300 mb-3">
+                            Company name mentioned in 8 different dark web discussions, primarily in cybercriminal forums.
+                        </p>
+                        <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                            <div class="font-mono text-sm">
+                                <p class="text-green-400">Forum: "CyberCriminals"</p>
+                                <p class="text-white">Topic: "Targeting Sample Company for ransomware"</p>
+                                <p class="text-white">Date: December 8, 2023</p>
+                                <p class="text-red-400">Threat Level: HIGH</p>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-400">
+                            <strong>Impact:</strong> Active targeting by cybercriminal groups increases risk of future attacks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Assessment -->
+                <div class="report-card rounded-xl p-8 mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6">Risk Assessment</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-4">Risk Levels</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-300">Credential Exposure</span>
+                                    <span class="text-red-400 font-bold">HIGH</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-300">Data Breach</span>
+                                    <span class="text-yellow-400 font-bold">MEDIUM</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-300">Targeting</span>
+                                    <span class="text-red-400 font-bold">HIGH</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-4">Recommended Actions</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span class="text-gray-300">Implement password reset for all affected accounts</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span class="text-gray-300">Enable multi-factor authentication</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span class="text-gray-300">Notify affected customers of data exposure</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span class="text-gray-300">Enhance monitoring for suspicious activity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remediation Timeline -->
+                <div class="report-card rounded-xl p-8 mb-8">
+                    <h3 class="text-xl font-bold text-white mb-6">Remediation Timeline</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center mr-4">
+                                <span class="text-white font-bold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Immediate (0-24 hours)</h4>
+                                <p class="text-gray-400">Reset passwords for all compromised accounts, enable MFA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center mr-4">
+                                <span class="text-white font-bold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Short-term (1-7 days)</h4>
+                                <p class="text-gray-400">Notify affected customers, enhance monitoring, conduct security audit</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center mr-4">
+                                <span class="text-white font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Long-term (1-4 weeks)</h4>
+                                <p class="text-gray-400">Implement continuous monitoring, security training, incident response plan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="report-card rounded-xl p-8">
+                    <h3 class="text-xl font-bold text-white mb-6">Next Steps</h3>
+                    <p class="text-gray-300 mb-6">
+                        Our team is ready to assist with implementing these recommendations and providing ongoing monitoring services to prevent future exposures.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="index.html#contact" class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">
+                            Schedule Consultation
+                        </a>
+                        <a href="continuous-monitoring.html" class="border border-primary text-primary hover:bg-blue-900 hover:bg-opacity-20 font-bold py-3 px-6 rounded-lg transition duration-300 text-center">
+                            Learn About Continuous Monitoring
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Get Your Own Dark Web Report
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Don't wait to discover if your organization is exposed. Our comprehensive scan will reveal all dark web threats targeting your business.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="index.html#contact" class="bg-white hover:bg-gray-100 text-dark font-bold py-4 px-8 rounded-lg transition duration-300">
+                    Request Your Scan
+                </a>
+                <a href="dark-web-exposure-scan.html" class="border border-white text-white hover:bg-white hover:bg-opacity-10 font-bold py-4 px-8 rounded-lg transition duration-300">
+                    Learn More About Our Scan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </div>
+                <div class="text-gray-400 text-sm text-center md:text-right">
+                    <p>© 2023 Aegis Security Solutions. All rights reserved.</p>
+                    <p class="mt-1">Dark Web Intelligence & Monitoring</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

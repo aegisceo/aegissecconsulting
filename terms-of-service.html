@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Aegis Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .animated-underline {
+            position: relative;
+        }
+        .animated-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-300 min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="bg-dark border-b border-gray-800 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#services" class="text-gray-300 hover:text-white animated-underline">Services</a>
+                <a href="index.html#process" class="text-gray-300 hover:text-white animated-underline">Our Process</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white animated-underline">About</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white animated-underline">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-dark py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="w-20 h-20 bg-blue-900 bg-opacity-30 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-file-contract text-primary text-3xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <span class="gradient-text">Terms of Service</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Legal terms and conditions for using Aegis Security services
+                </p>
+                <p class="text-gray-500 mt-4">Last updated: December 15, 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-12">
+                    <!-- Agreement -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">1. Agreement to Terms</h2>
+                        <p class="text-gray-300 mb-4">
+                            By accessing or using the services provided by Aegis Security Solutions ("we," "our," or "us"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access our services.
+                        </p>
+                        <p class="text-gray-300">
+                            These Terms apply to all users of our services, including without limitation users who are browsers, vendors, customers, merchants, and/or contributors of content.
+                        </p>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">2. Description of Services</h2>
+                        <p class="text-gray-300 mb-4">
+                            Aegis Security provides cybersecurity services including but not limited to:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Dark web exposure scanning and monitoring</li>
+                            <li>Threat intelligence and reporting</li>
+                            <li>Incident response and breach management</li>
+                            <li>Security awareness training</li>
+                            <li>VIP executive protection services</li>
+                            <li>Continuous monitoring and alerting</li>
+                        </ul>
+                        <p class="text-gray-300 mt-4">
+                            We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.
+                        </p>
+                    </div>
+
+                    <!-- User Accounts -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">3. User Accounts and Registration</h2>
+                        <p class="text-gray-300 mb-4">
+                            To access certain services, you may be required to create an account. You are responsible for:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Maintaining the confidentiality of your account credentials</li>
+                            <li>All activities that occur under your account</li>
+                            <li>Providing accurate and complete information</li>
+                            <li>Promptly updating your account information</li>
+                            <li>Notifying us immediately of any unauthorized use</li>
+                        </ul>
+                        <p class="text-gray-300 mt-4">
+                            We reserve the right to terminate accounts that violate these Terms or are inactive for extended periods.
+                        </p>
+                    </div>
+
+                    <!-- Acceptable Use -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">4. Acceptable Use Policy</h2>
+                        <p class="text-gray-300 mb-4">
+                            You agree to use our services only for lawful purposes and in accordance with these Terms. You agree not to:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Use our services for any illegal or unauthorized purpose</li>
+                            <li>Attempt to gain unauthorized access to our systems</li>
+                            <li>Interfere with or disrupt our services or servers</li>
+                            <li>Use our services to harm, threaten, or harass others</li>
+                            <li>Share account credentials with unauthorized users</li>
+                            <li>Reverse engineer or attempt to extract source code</li>
+                            <li>Use our services to conduct security testing without authorization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Payment Terms -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">5. Payment Terms</h2>
+                        <p class="text-gray-300 mb-4">
+                            Payment terms vary by service and are specified in your service agreement. General terms include:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>All fees are due in advance unless otherwise specified</li>
+                            <li>Payments are non-refundable except as required by law</li>
+                            <li>We may change pricing with 30 days' notice</li>
+                            <li>Late payments may result in service suspension</li>
+                            <li>All fees are exclusive of taxes unless stated otherwise</li>
+                        </ul>
+                    </div>
+
+                    <!-- Intellectual Property -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">6. Intellectual Property Rights</h2>
+                        <p class="text-gray-300 mb-4">
+                            Our services and content are protected by intellectual property laws. You acknowledge that:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>We retain all rights to our proprietary technology and content</li>
+                            <li>You may not copy, modify, or distribute our materials without permission</li>
+                            <li>Threat intelligence reports are for your internal use only</li>
+                            <li>You retain rights to your own data and content</li>
+                            <li>We may use anonymized data for service improvement</li>
+                        </ul>
+                    </div>
+
+                    <!-- Privacy and Data -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">7. Privacy and Data Protection</h2>
+                        <p class="text-gray-300 mb-4">
+                            Your privacy is important to us. Our data practices are governed by our Privacy Policy, which is incorporated into these Terms by reference.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            When using our services, you agree that:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>You have the right to provide any data you share with us</li>
+                            <li>We may process your data as described in our Privacy Policy</li>
+                            <li>We implement appropriate security measures to protect your data</li>
+                            <li>You are responsible for the accuracy of information you provide</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Level Agreement -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">8. Service Level Agreement</h2>
+                        <p class="text-gray-300 mb-4">
+                            Our services are provided "as is" and "as available." We strive for high availability but do not guarantee:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Uninterrupted or error-free service</li>
+                            <li>Complete accuracy of threat intelligence</li>
+                            <li>Detection of all security threats</li>
+                            <li>Compatibility with all systems or networks</li>
+                        </ul>
+                        <p class="text-gray-300 mt-4">
+                            Specific service level commitments are detailed in your service agreement.
+                        </p>
+                    </div>
+
+                    <!-- Limitation of Liability -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">9. Limitation of Liability</h2>
+                        <p class="text-gray-300 mb-4">
+                            To the maximum extent permitted by law, Aegis Security shall not be liable for:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Indirect, incidental, or consequential damages</li>
+                            <li>Loss of profits, data, or business opportunities</li>
+                            <li>Damages resulting from security incidents</li>
+                            <li>Third-party actions or failures</li>
+                            <li>Force majeure events beyond our control</li>
+                        </ul>
+                        <p class="text-gray-300 mt-4">
+                            Our total liability shall not exceed the amount paid for services in the 12 months preceding the claim.
+                        </p>
+                    </div>
+
+                    <!-- Indemnification -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">10. Indemnification</h2>
+                        <p class="text-gray-300 mb-4">
+                            You agree to indemnify and hold harmless Aegis Security from any claims, damages, or expenses arising from:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Your use of our services</li>
+                            <li>Your violation of these Terms</li>
+                            <li>Your violation of any third-party rights</li>
+                            <li>Your provision of inaccurate information</li>
+                        </ul>
+                    </div>
+
+                    <!-- Termination -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">11. Termination</h2>
+                        <p class="text-gray-300 mb-4">
+                            Either party may terminate these Terms with written notice. Upon termination:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Your access to services will cease</li>
+                            <li>You remain responsible for any outstanding payments</li>
+                            <li>We will delete your data within 30 days</li>
+                            <li>Surviving provisions remain in effect</li>
+                        </ul>
+                    </div>
+
+                    <!-- Governing Law -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">12. Governing Law and Disputes</h2>
+                        <p class="text-gray-300 mb-4">
+                            These Terms are governed by the laws of the State of New York, without regard to conflict of law principles.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            Any disputes shall be resolved through binding arbitration in New York, NY, in accordance with the rules of the American Arbitration Association.
+                        </p>
+                        <p class="text-gray-300">
+                            You waive any right to a jury trial or class action lawsuit.
+                        </p>
+                    </div>
+
+                    <!-- Miscellaneous -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">13. Miscellaneous</h2>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>These Terms constitute the entire agreement between parties</li>
+                            <li>If any provision is unenforceable, the remainder remains in effect</li>
+                            <li>Our failure to enforce any right is not a waiver</li>
+                            <li>These Terms may be assigned by us but not by you</li>
+                            <li>Notices must be in writing and sent to our registered address</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6">14. Contact Information</h2>
+                        <p class="text-gray-300 mb-4">
+                            For questions about these Terms of Service, please contact us:
+                        </p>
+                        <div class="space-y-2 text-gray-300">
+                            <p><strong>Email:</strong> legal@aegissecurity.com</p>
+                            <p><strong>Phone:</strong> +1 (800) 555-1234</p>
+                            <p><strong>Address:</strong> Secure Facility, New York, NY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </div>
+                <div class="text-gray-400 text-sm text-center md:text-right">
+                    <p>© 2023 Aegis Security Solutions. All rights reserved.</p>
+                    <p class="mt-1">Dark Web Intelligence & Monitoring</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

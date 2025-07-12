@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuous Monitoring | Aegis Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        .animated-underline {
+            position: relative;
+        }
+        .animated-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover:after {
+            width: 100%;
+        }
+        .alert-card {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-300 min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="bg-dark border-b border-gray-800 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#services" class="text-gray-300 hover:text-white animated-underline">Services</a>
+                <a href="index.html#process" class="text-gray-300 hover:text-white animated-underline">Our Process</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-white animated-underline">About</a>
+                <a href="index.html#contact" class="text-gray-300 hover:text-white animated-underline">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-dark py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="w-20 h-20 bg-green-900 bg-opacity-30 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-shield-alt text-secondary text-3xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    24/7 <span class="gradient-text">Continuous Monitoring</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Real-time dark web monitoring with instant alerts when your organization's data appears on underground sources.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Dashboard Preview -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Live <span class="gradient-text">Dashboard</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    See what your continuous monitoring dashboard looks like in real-time
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+                    <div class="flex items-center mb-6">
+                        <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500 mr-4"></div>
+                        <span class="text-white font-mono">Aegis Security Dashboard - Live</span>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <!-- Alert Panel -->
+                        <div class="bg-red-900 bg-opacity-20 border border-red-700 rounded-lg p-4 alert-card">
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>
+                                <h3 class="text-white font-bold">Active Alerts</h3>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-sm">
+                                    <span class="text-red-400 font-bold">NEW:</span>
+                                    <span class="text-white">Employee credentials found on marketplace</span>
+                                </div>
+                                <div class="text-sm">
+                                    <span class="text-yellow-400 font-bold">1h ago:</span>
+                                    <span class="text-white">Company mentioned in hacker forum</span>
+                                </div>
+                                <div class="text-sm">
+                                    <span class="text-yellow-400 font-bold">3h ago:</span>
+                                    <span class="text-white">Database dump detected</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Stats Panel -->
+                        <div class="bg-gray-800 border border-gray-700 rounded-lg p-4">
+                            <h3 class="text-white font-bold mb-3">Today's Activity</h3>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Scans Completed:</span>
+                                    <span class="text-white">1,247</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Sources Monitored:</span>
+                                    <span class="text-white">2,891</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Threats Detected:</span>
+                                    <span class="text-red-400">3</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Coverage Panel -->
+                        <div class="bg-gray-800 border border-gray-700 rounded-lg p-4">
+                            <h3 class="text-white font-bold mb-3">Coverage Status</h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                                    <span class="text-gray-400">Dark Web Markets</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                                    <span class="text-gray-400">Hacker Forums</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                                    <span class="text-gray-400">Paste Sites</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
+                                    <span class="text-gray-400">Telegram Channels</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity Feed -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-4">
+                        <h3 class="text-white font-bold mb-4">Recent Activity</h3>
+                        <div class="space-y-3 font-mono text-sm">
+                            <div class="flex items-center">
+                                <span class="text-green-400">[12:34]</span>
+                                <span class="text-white ml-2">Scanning marketplace "ShadowMarket"</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-red-400">[12:32]</span>
+                                <span class="text-white ml-2">ALERT: New credential listing detected</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-green-400">[12:30]</span>
+                                <span class="text-white ml-2">Monitoring forum "CyberCriminals"</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-yellow-400">[12:28]</span>
+                                <span class="text-white ml-2">WARNING: Company mention in chat</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-green-400">[12:25]</span>
+                                <span class="text-white ml-2">Checking paste site "LeakHub"</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monitoring Features -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Monitoring <span class="gradient-text">Features</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Comprehensive 24/7 monitoring across all dark web sources
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-blue-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bell text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Real-Time Alerts</h3>
+                    <p class="text-gray-400">
+                        Instant notifications via email, SMS, and dashboard when your data is detected on dark web sources.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-green-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-clock text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">24/7 Coverage</h3>
+                    <p class="text-gray-400">
+                        Continuous monitoring with no downtime, ensuring threats are detected immediately when they appear.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-purple-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Trend Analysis</h3>
+                    <p class="text-gray-400">
+                        Advanced analytics to identify patterns and predict emerging threats before they impact your organization.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-yellow-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-yellow-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Dedicated Team</h3>
+                    <p class="text-gray-400">
+                        Expert threat analysts available 24/7 to investigate alerts and provide immediate response guidance.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-red-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-virus text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Threat Intelligence</h3>
+                    <p class="text-gray-400">
+                        Context-rich intelligence about threats, including attacker motivations, tools, and techniques.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+                    <div class="w-12 h-12 bg-indigo-900 bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Mobile App</h3>
+                    <p class="text-gray-400">
+                        Mobile application for instant alerts and dashboard access from anywhere, anytime.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert Types -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Alert <span class="gradient-text">Types</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Different types of alerts you'll receive based on threat severity and type
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Critical Alerts -->
+                <div class="bg-gray-800 border-l-4 border-red-400 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-exclamation-triangle text-red-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">Critical Alerts</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Immediate notifications for high-priority threats requiring immediate action.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-red-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Active credential sales</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-red-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Ransomware discussions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-red-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Data breach announcements</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-red-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Targeted attack planning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Warning Alerts -->
+                <div class="bg-gray-800 border-l-4 border-yellow-400 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-exclamation-circle text-yellow-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">Warning Alerts</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Medium-priority alerts for potential threats that require monitoring and assessment.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-yellow-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Company mentions in forums</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-yellow-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Data dumps containing PII</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-yellow-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">API key exposures</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-yellow-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Infrastructure discussions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Info Alerts -->
+                <div class="bg-gray-800 border-l-4 border-blue-400 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-info-circle text-blue-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">Info Alerts</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Informational alerts about general threats and industry trends.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-blue-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Industry threat trends</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-blue-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">New attack techniques</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-blue-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Vulnerability disclosures</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-blue-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Security tool updates</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Success Alerts -->
+                <div class="bg-gray-800 border-l-4 border-green-400 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-check-circle text-green-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">Success Alerts</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Positive notifications about threat mitigation and security improvements.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-green-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Threats successfully mitigated</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-green-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Security improvements implemented</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-green-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">Monitoring coverage expanded</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-circle text-green-400 text-xs mr-2"></i>
+                            <span class="text-gray-300">False positive confirmations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Monitoring <span class="gradient-text">Plans</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Choose the monitoring plan that provides the right level of protection for your organization
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Monitoring -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">Basic Monitoring</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$2,500</div>
+                        <p class="text-gray-400">per month</p>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Core dark web sources</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Email alerts</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Monthly reports</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Basic dashboard</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">5-day response time</span>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center block">
+                        Start Basic Monitoring
+                    </a>
+                </div>
+                
+                <!-- Professional Monitoring -->
+                <div class="bg-gray-900 border-2 border-primary rounded-xl p-8 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">Most Popular</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">Professional Monitoring</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$5,000</div>
+                        <p class="text-gray-400">per month</p>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">All Basic features</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Extended source coverage</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">SMS alerts</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Advanced dashboard</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">24-hour response time</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Quarterly reviews</span>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center block">
+                        Start Professional Monitoring
+                    </a>
+                </div>
+                
+                <!-- Enterprise Monitoring -->
+                <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">Enterprise Monitoring</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$10,000</div>
+                        <p class="text-gray-400">per month</p>
+                    </div>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">All Professional features</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Custom threat intelligence</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Mobile app access</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Dedicated analyst</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">1-hour response time</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span class="text-gray-300">Monthly executive briefings</span>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center block">
+                        Start Enterprise Monitoring
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Never Miss a Dark Web Threat Again
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Get 24/7 continuous monitoring with real-time alerts to protect your organization from dark web threats.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="index.html#contact" class="bg-white hover:bg-gray-100 text-dark font-bold py-4 px-8 rounded-lg transition duration-300">
+                    Start Monitoring Today
+                </a>
+                <a href="dark-web-exposure-scan.html" class="border border-white text-white hover:bg-white hover:bg-opacity-10 font-bold py-4 px-8 rounded-lg transition duration-300">
+                    Get Initial Scan First
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </div>
+                <div class="text-gray-400 text-sm text-center md:text-right">
+                    <p>© 2023 Aegis Security Solutions. All rights reserved.</p>
+                    <p class="mt-1">Dark Web Intelligence & Monitoring</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

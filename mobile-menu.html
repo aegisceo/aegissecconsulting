@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Aegis Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-300 min-h-screen font-sans">
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 bg-black bg-opacity-75 z-50">
+        <div class="bg-dark h-full w-full max-w-sm ml-auto">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-6 border-b border-gray-800">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-white">Aegis<span class="gradient-text">Security</span></span>
+                </div>
+                <button onclick="window.history.back()" class="text-gray-400 hover:text-white">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="p-6">
+                <div class="space-y-6">
+                    <!-- Main Navigation -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">Navigation</h3>
+                        <div class="space-y-3">
+                            <a href="index.html" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-home mr-3"></i>
+                                <span>Home</span>
+                            </a>
+                            <a href="index.html#services" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-shield-alt mr-3"></i>
+                                <span>Services</span>
+                            </a>
+                            <a href="index.html#process" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-cogs mr-3"></i>
+                                <span>Our Process</span>
+                            </a>
+                            <a href="index.html#about" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-info-circle mr-3"></i>
+                                <span>About</span>
+                            </a>
+                            <a href="index.html#contact" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-envelope mr-3"></i>
+                                <span>Contact</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">Our Services</h3>
+                        <div class="space-y-3">
+                            <a href="dark-web-exposure-scan.html" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-search mr-3"></i>
+                                <span>Dark Web Exposure Scan</span>
+                            </a>
+                            <a href="continuous-monitoring.html" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-shield-alt mr-3"></i>
+                                <span>Continuous Monitoring</span>
+                            </a>
+                            <a href="threat-intelligence-reports.html" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-chart-line mr-3"></i>
+                                <span>Threat Intelligence Reports</span>
+                            </a>
+                            <a href="breach-response.html" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-user-secret mr-3"></i>
+                                <span>Breach Response</span>
+                            </a>
+                            <a href="security-training.html" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-graduation-cap mr-3"></i>
+                                <span>Security Training</span>
+                            </a>
+                            <a href="vip-executive-protection.html" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-lock mr-3"></i>
+                                <span>VIP Executive Protection</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Resources -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">Resources</h3>
+                        <div class="space-y-3">
+                            <a href="sample-report.html" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-file-alt mr-3"></i>
+                                <span>Sample Report</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-book mr-3"></i>
+                                <span>Security Blog</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-download mr-3"></i>
+                                <span>Whitepapers</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">Contact</h3>
+                        <div class="space-y-3">
+                            <a href="tel:+18005551234" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-phone mr-3"></i>
+                                <span>+1 (800) 555-1234</span>
+                            </a>
+                            <a href="mailto:contact@aegissecurity.com" class="flex items-center text-gray-300 hover:text-white py-2">
+                                <i class="fas fa-envelope mr-3"></i>
+                                <span>contact@aegissecurity.com</span>
+                            </a>
+                            <div class="flex items-center text-gray-300 py-2">
+                                <i class="fas fa-map-marker-alt mr-3"></i>
+                                <span>Secure Facility, New York, NY</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary flex items-center justify-center transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-700 flex items-center justify-center transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (e.target === document.querySelector('.fixed')) {
+                window.history.back();
+            }
+        });
+    </script>
+</body>
+</html> 
