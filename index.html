@@ -620,33 +620,34 @@
                 <div class="lg:w-1/2">
                     <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
                         <h3 class="text-xl font-bold text-white mb-6">Send Us a Message</h3>
-                        <form>
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                             <div class="mb-6">
                                 <label for="name" class="block text-gray-400 mb-2">Full Name</label>
-                                <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Smith">
+                                <input type="text" id="name" name="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Smith" required>
                             </div>
                             <div class="mb-6">
                                 <label for="email" class="block text-gray-400 mb-2">Email Address</label>
-                                <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@yourcompany.com">
+                                <input type="email" id="email" name="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@yourcompany.com" required>
                             </div>
                             <div class="mb-6">
                                 <label for="company" class="block text-gray-400 mb-2">Company Name</label>
-                                <input type="text" id="company" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your Company Inc.">
+                                <input type="text" id="company" name="company" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your Company Inc." required>
                             </div>
                             <div class="mb-6">
                                 <label for="service" class="block text-gray-400 mb-2">Service Interest</label>
-                                <select id="service" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                    <option>Dark Web Exposure Scan</option>
-                                    <option>Continuous Monitoring</option>
-                                    <option>Threat Intelligence Reports</option>
-                                    <option>Breach Response</option>
-                                    <option>Security Training</option>
-                                    <option>VIP Executive Protection</option>
+                                <select id="service" name="service" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="Dark Web Exposure Scan">Dark Web Exposure Scan</option>
+                                    <option value="Continuous Monitoring">Continuous Monitoring</option>
+                                    <option value="Threat Intelligence Reports">Threat Intelligence Reports</option>
+                                    <option value="Breach Response">Breach Response</option>
+                                    <option value="Security Training">Security Training</option>
+                                    <option value="VIP Executive Protection">VIP Executive Protection</option>
                                 </select>
                             </div>
                             <div class="mb-6">
                                 <label for="message" class="block text-gray-400 mb-2">Message</label>
-                                <textarea id="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your security concerns..."></textarea>
+                                <textarea id="message" name="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your security concerns..." required></textarea>
                             </div>
                             <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                                 Send Message
@@ -698,6 +699,22 @@
             // This would toggle a mobile menu
             alert('Mobile menu would open here in a full implementation');
         });
+
+        // Form submission handling
+        const contactForm = document.querySelector('form[action*="formspree"]');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                // Show loading state
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Form will be handled by Formspree
+                // They will redirect to a success page or show a success message
+            });
+        }
     </script>
 <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=aegisceo/dw-services" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
 </html>
