@@ -53,13 +53,27 @@
             width: 100%;
         }
         .service-card {
-            height: 380px;
+            position: relative;
+            height: 320px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-end;
             overflow: hidden;
         }
+        .service-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.04);
+        }
         .service-card p {
+            color: #e5e7eb;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -178,16 +192,14 @@
                 <!-- Service 1 -->
                 <a href="dark-web-exposure-scan.html" class="block group">
                     <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 service-card group-hover:border-primary transition-all duration-300">
-                        <div class="flex justify-end mb-6">
-                            <div class="w-16 h-16 rounded-lg flex items-center justify-center" style="background: inherit;">
-                                <i class="fas fa-search text-primary text-4xl"></i>
-                            </div>
+                        <div class="service-icon">
+                            <i class="fas fa-search text-primary text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-4">Dark Web Exposure Scan</h3>
-                        <p class="text-gray-200 mb-6">
+                        <p class="mb-6">
                             One-time comprehensive scan of dark web markets, hacker forums, and paste sites for your organization's exposed data.
                         </p>
-                        <div class="flex items-center text-primary font-medium group-hover:text-primary">
+                        <div class="flex items-center text-primary font-medium group-hover:text-primary mt-auto">
                             <span>Learn more</span>
                             <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </div>
@@ -196,34 +208,30 @@
                 <!-- vCISO Service -->
                 <a href="#" class="block group">
                     <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 service-card group-hover:border-primary transition-all duration-300">
-                        <div class="flex justify-end mb-6">
-                            <div class="w-16 h-16 rounded-lg flex items-center justify-center" style="background: inherit;">
-                                <i class="fas fa-user-tie text-purple-400 text-4xl"></i>
-                            </div>
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie text-purple-400 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-4">vCISO Services</h3>
-                        <p class="text-gray-200 mb-6">
+                        <p class="mb-6">
                             Strategic cybersecurity leadership and governance for organizations without a full-time CISO. Executive guidance, risk management, and security program development.
                         </p>
-                        <div class="flex items-center text-primary font-medium group-hover:text-primary">
+                        <div class="flex items-center text-primary font-medium group-hover:text-primary mt-auto">
                             <span>Learn more</span>
                             <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </div>
                     </div>
                 </a>
-                <!-- Service 3 -->
+                <!-- Threat Intelligence Reports -->
                 <a href="threat-intelligence-reports.html" class="block group">
                     <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 service-card group-hover:border-accent transition-all duration-300">
-                        <div class="flex justify-end mb-6">
-                            <div class="w-16 h-16 rounded-lg flex items-center justify-center" style="background: inherit;">
-                                <i class="fas fa-chart-line text-accent text-4xl"></i>
-                            </div>
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line text-accent text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-4">Threat Intelligence Reports</h3>
-                        <p class="text-gray-200 mb-6">
+                        <p class="mb-6">
                             Monthly executive reports detailing emerging threats specific to your industry and recommended actions.
                         </p>
-                        <div class="flex items-center text-accent font-medium group-hover:text-accent">
+                        <div class="flex items-center text-accent font-medium group-hover:text-accent mt-auto">
                             <span>Learn more</span>
                             <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </div>
@@ -237,16 +245,14 @@
                     <!-- Service 4 -->
                     <a href="security-training.html" class="block group">
                         <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 service-card group-hover:border-red-400 transition-all duration-300">
-                            <div class="flex justify-end mb-6">
-                                <div class="w-16 h-16 rounded-lg flex items-center justify-center" style="background: inherit;">
-                                    <i class="fas fa-graduation-cap text-red-400 text-4xl"></i>
-                                </div>
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap text-red-400 text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-4">Security Training</h3>
-                            <p class="text-gray-200 mb-6">
+                            <p class="mb-6">
                                 Customized security awareness training for your team based on actual threats targeting your industry.
                             </p>
-                            <div class="flex items-center text-red-400 font-medium group-hover:text-red-400">
+                            <div class="flex items-center text-red-400 font-medium group-hover:text-red-400 mt-auto">
                                 <span>Learn more</span>
                                 <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                             </div>
@@ -255,16 +261,14 @@
                     <!-- Service 5 -->
                     <a href="vip-executive-protection.html" class="block group">
                         <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 service-card group-hover:border-primary transition-all duration-300">
-                            <div class="flex justify-end mb-6">
-                                <div class="w-16 h-16 rounded-lg flex items-center justify-center" style="background: inherit;">
-                                    <i class="fas fa-lock text-primary text-4xl"></i>
-                                </div>
+                            <div class="service-icon">
+                                <i class="fas fa-lock text-primary text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold text-white mb-4">VIP Executive Protection</h3>
-                            <p class="text-gray-200 mb-6">
+                            <p class="mb-6">
                                 Specialized monitoring for C-level executives and high-profile individuals within your organization.
                             </p>
-                            <div class="flex items-center text-primary font-medium group-hover:text-primary">
+                            <div class="flex items-center text-primary font-medium group-hover:text-primary mt-auto">
                                 <span>Learn more</span>
                                 <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                             </div>
