@@ -53,10 +53,18 @@
             width: 100%;
         }
         .service-card {
-            min-height: 340px;
+            height: 380px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            overflow: hidden;
+        }
+        .service-card p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
         @media (min-width: 768px) {
             .services-bottom-row {
