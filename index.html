@@ -54,39 +54,53 @@
         }
         .service-card {
             position: relative;
-            min-height: 0;
-            height: auto;
+            min-height: 170px;
+            max-height: 170px;
+            height: 170px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            padding-top: 2.5rem;
-            padding-bottom: 2rem;
+            padding: 1.25rem 1.5rem 1rem 1.5rem;
+            overflow: hidden;
         }
         .service-card-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 1rem;
+            margin-bottom: 0.25rem;
         }
         .service-icon {
             position: static;
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2.2rem;
+            height: 2.2rem;
             border-radius: 0.75rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255,255,255,0.04);
+            background: transparent;
             margin-left: 0.5rem;
         }
+        .service-card h3 {
+            font-size: 1.35rem;
+            font-weight: 900;
+            margin-bottom: 0;
+        }
         .service-card p {
-            color: #e5e7eb;
-            margin-bottom: 1.5rem;
+            color: #f1f5f9;
+            text-align: center;
+            margin-bottom: 0.25rem;
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.4;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
+        }
+        .service-card .font-medium {
+            justify-content: center;
+            width: 100%;
         }
         @media (min-width: 768px) {
             .services-bottom-row {
@@ -199,11 +213,11 @@
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <!-- Service 1 -->
                 <a href="dark-web-exposure-scan.html" class="block group">
-                    <div class="bg-gray-900 border border-gray-800 rounded-xl p-8 service-card group-hover:border-primary transition-all duration-300">
+                    <div class="bg-gray-900 border border-gray-800 rounded-xl service-card group-hover:border-primary transition-all duration-300">
                         <div class="service-card-header">
-                            <h3 class="text-xl font-bold text-white">Dark Web Exposure Scan</h3>
+                            <h3 class="text-white">Dark Web Exposure Scan</h3>
                             <div class="service-icon">
-                                <i class="fas fa-search text-primary text-2xl"></i>
+                                <i class="fas fa-search text-primary text-3xl"></i>
                             </div>
                         </div>
                         <p>
