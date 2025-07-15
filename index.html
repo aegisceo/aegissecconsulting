@@ -52,6 +52,17 @@
         .animated-underline:hover:after {
             width: 100%;
         }
+        .service-card {
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        @media (min-width: 768px) {
+            .services-bottom-row {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body class="bg-darker text-gray-300 min-h-screen font-sans">
@@ -207,7 +218,7 @@
             </div>
             
             <!-- Bottom row with 2 centered cards -->
-            <div class="flex justify-center">
+            <div class="flex services-bottom-row">
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
                     <!-- Service 4 -->
                     <a href="security-training.html" class="block group">
