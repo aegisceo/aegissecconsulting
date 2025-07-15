@@ -550,7 +550,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">Get in <span class="gradient-text">Touch</span></h2>
                 <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                    Ready to discover if your organization is exposed on the dark web? Contact us for a confidential consultation.
+                    Ready to protect your organization from dark web threats? Contact us for a confidential security consultation.
                 </p>
             </div>
             
@@ -566,6 +566,7 @@
                                 <div>
                                     <h4 class="text-white font-medium">Email</h4>
                                     <a href="mailto:contact@aegissecurity.com" class="text-gray-400 hover:text-primary">contact@aegissecurity.com</a>
+                                    <p class="text-gray-500 text-sm mt-1">For urgent security concerns</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -575,6 +576,7 @@
                                 <div>
                                     <h4 class="text-white font-medium">Phone</h4>
                                     <a href="tel:+18005551234" class="text-gray-400 hover:text-secondary">+1 (800) 555-1234</a>
+                                    <p class="text-gray-500 text-sm mt-1">Available 24/7 for emergencies</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -584,22 +586,26 @@
                                 <div>
                                     <h4 class="text-white font-medium">HQ Location</h4>
                                     <p class="text-gray-400">Secure Facility, New York, NY</p>
+                                    <p class="text-gray-500 text-sm mt-1">By appointment only</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="mt-12">
-                            <h3 class="text-xl font-bold text-white mb-6">Follow Us</h3>
-                            <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary flex items-center justify-center transition duration-300">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-700 flex items-center justify-center transition duration-300">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition duration-300">
-                                    <i class="fab fa-github"></i>
-                                </a>
+                            <h3 class="text-xl font-bold text-white mb-6">Response Times</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-400">Dark Web Scan Requests</span>
+                                    <span class="text-white font-medium">Within 24 hours</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-400">Emergency Breach Response</span>
+                                    <span class="text-white font-medium">Within 2 hours</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-400">vCISO Consultation</span>
+                                    <span class="text-white font-medium">Within 48 hours</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -607,36 +613,52 @@
                 
                 <div class="lg:w-1/2">
                     <div class="bg-gray-900 border border-gray-800 rounded-xl p-8">
-                        <h3 class="text-xl font-bold text-white mb-6">Send Us a Message</h3>
+                        <h3 class="text-xl font-bold text-white mb-6">Request a Consultation</h3>
                         <form id="contactForm" action="https://formspree.io/f/movlazrv" method="POST">
                             <div class="mb-6">
-                                <label for="name" class="block text-gray-400 mb-2">Full Name</label>
+                                <label for="name" class="block text-gray-400 mb-2">Full Name *</label>
                                 <input type="text" id="name" name="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Smith" required>
                             </div>
                             <div class="mb-6">
-                                <label for="email" class="block text-gray-400 mb-2">Email Address</label>
+                                <label for="email" class="block text-gray-400 mb-2">Email Address *</label>
                                 <input type="email" id="email" name="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@yourcompany.com" required>
                             </div>
                             <div class="mb-6">
-                                <label for="company" class="block text-gray-400 mb-2">Company Name</label>
+                                <label for="company" class="block text-gray-400 mb-2">Company Name *</label>
                                 <input type="text" id="company" name="company" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your Company Inc." required>
                             </div>
                             <div class="mb-6">
-                                <label for="service" class="block text-gray-400 mb-2">Service Interest</label>
+                                <label for="title" class="block text-gray-400 mb-2">Job Title</label>
+                                <input type="text" id="title" name="title" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="CISO, IT Director, etc.">
+                            </div>
+                            <div class="mb-6">
+                                <label for="service" class="block text-gray-400 mb-2">Primary Service Interest *</label>
                                 <select id="service" name="service" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
                                     <option value="">Select a service...</option>
                                     <option value="Dark Web Exposure Scan">Dark Web Exposure Scan</option>
                                     <option value="Threat Intelligence Reports">Threat Intelligence Reports</option>
+                                    <option value="vCISO Services">vCISO Services</option>
                                     <option value="Security Training">Security Training</option>
                                     <option value="VIP Executive Protection">VIP Executive Protection</option>
+                                    <option value="Emergency Response">Emergency Response</option>
                                 </select>
                             </div>
                             <div class="mb-6">
-                                <label for="message" class="block text-gray-400 mb-2">Message</label>
-                                <textarea id="message" name="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your security concerns..." required></textarea>
+                                <label for="urgency" class="block text-gray-400 mb-2">Urgency Level</label>
+                                <select id="urgency" name="urgency" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="">Select urgency...</option>
+                                    <option value="Routine">Routine - Planning phase</option>
+                                    <option value="Standard">Standard - Within 1-2 weeks</option>
+                                    <option value="Urgent">Urgent - Within 48 hours</option>
+                                    <option value="Emergency">Emergency - Immediate response needed</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-400 mb-2">Security Concerns *</label>
+                                <textarea id="message" name="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Describe your security concerns, suspected breach, or specific threats you're facing..." required></textarea>
                             </div>
                             <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                                Send Message
+                                Request Consultation
                             </button>
                         </form>
                     </div>
