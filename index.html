@@ -107,6 +107,20 @@
                 justify-content: center;
             }
         }
+        /* Add or update heading color differentiation */
+        .section-heading {
+            color: #3b82f6; /* Use primary color for strong differentiation */
+            background: none;
+            background-clip: unset;
+            -webkit-background-clip: unset;
+            text-shadow: 0 2px 16px rgba(59,130,246,0.12);
+        }
+        .section-heading .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
     </style>
 </head>
 <body class="bg-darker text-gray-300 min-h-screen font-sans">
@@ -204,7 +218,7 @@
     <section id="services" class="py-20 bg-dark">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">Our <span class="gradient-text">Services</span></h2>
+                <h2 class="text-5xl md:text-6xl font-extrabold section-heading mb-6 tracking-tight leading-tight">Our <span class="gradient-text">Services</span></h2>
                 <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                     Comprehensive dark web and threat intelligence solutions tailored to your organization's needs
                 </p>
@@ -315,7 +329,7 @@
     <section id="process" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">Our <span class="gradient-text">Process</span></h2>
+                <h2 class="text-5xl md:text-6xl font-extrabold section-heading mb-6 tracking-tight leading-tight">Our <span class="gradient-text">Process</span></h2>
                 <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                     A streamlined approach to identifying and mitigating dark web threats
                 </p>
@@ -450,7 +464,7 @@
     <section class="py-20 bg-dark">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">What Our <span class="gradient-text">Clients</span> Say</h2>
+                <h2 class="text-5xl md:text-6xl font-extrabold section-heading mb-6 tracking-tight leading-tight">What Our <span class="gradient-text">Clients</span> Say</h2>
                 <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                     Trusted by security teams across industries
                 </p>
@@ -532,7 +546,7 @@
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-blue-900 to-gray-900">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+            <h2 class="text-5xl md:text-6xl font-extrabold section-heading mb-6 tracking-tight leading-tight">
                 Proactive Dark Web Protection
             </h2>
             <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -554,7 +568,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
-                    <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">About <span class="gradient-text">Aegis Security</span></h2>
+                    <h2 class="text-5xl md:text-6xl font-extrabold section-heading mb-6 tracking-tight leading-tight">About <span class="gradient-text">Aegis Security</span></h2>
                     <p class="text-gray-400 mb-6">
                         Aegis Security specializes in dark web intelligence, threat monitoring, and strategic cybersecurity consulting for organizations facing sophisticated cyber threats.
                     </p>
@@ -619,7 +633,7 @@
     <section id="contact" class="py-20 bg-dark">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">Get in <span class="gradient-text">Touch</span></h2>
+                <h2 class="text-5xl md:text-6xl font-extrabold section-heading mb-6 tracking-tight leading-tight">Get in <span class="gradient-text">Touch</span></h2>
                 <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                     Ready to protect your organization from dark web threats? Contact us for a confidential security consultation.
                 </p>
